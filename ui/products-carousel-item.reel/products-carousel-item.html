@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="products-carousel-item.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"},
+                "blurredImageElement": {"#": "blurredImage"},
+                "imageElement": {"#": "image"}
+            },
+            "bindings": {
+                "background": {"<-": "@owner.product.background"},
+                "image": {"<-": "@owner.product.image"}
+            }
+        },
+        "brand": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "brand"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.brand"}
+            }
+        },
+        "description": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "description"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.description"}
+            }
+        },
+        "color": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "color"}
+            },
+            "bindings": {
+                "value": {"<-": "@owner.product.color"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductsCarouselItem">
+        <div data-montage-id="blurredImage" class="ProductsCarouselItem-blurredImage"></div>
+        <div data-montage-id="brand" class="ProductsCarouselItem-brand"></div>
+        <div class="ProductsCarouselItem-info">
+            <div data-montage-id="color" class="ProductsCarouselItem-color"></div>
+            <div data-montage-id="description" class="ProductsCarouselItem-description"></div>
+        </div>
+        <div data-montage-id="image" class="ProductsCarouselItem-image"></div>
+    </div>
+</body>
+</html>

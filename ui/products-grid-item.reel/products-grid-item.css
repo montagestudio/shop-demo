@@ -1,0 +1,87 @@
+.ProductsGridItem {
+    position: relative;
+    width: 30%;
+    max-width: 33.3333%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 180px;
+    color: #777;
+}
+
+.ProductsGridItem-info {
+    font-size: 13px;
+    line-height: 15px;
+    padding: 17px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, .05);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .04), rgba(0, 0, 0, 0));
+}
+
+.ProductsGridItem-brand {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ProductsGridItem-description {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #444;
+}
+
+.ProductsGridItem-image {
+    position: absolute;
+    top: 27px;
+    right: 30%;
+    left: 30%;
+    bottom: 30px;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+@media (max-width: 749px) {
+
+    .ProductsGridItem-description {
+        display: none;
+    }
+
+    .ProductsGridItem-brand {
+        font-size: 10px;
+        text-transform: none;
+        color: black;
+    }
+
+    .ProductsGridItem {
+        height: 125px;
+    }
+
+    .ProductsGridItem-image {
+        position: absolute;
+        top: 7px;
+        right: 22%;
+        left: 22%;
+        bottom: 26px;
+        box-sizing: border-box;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center bottom;
+    }
+}

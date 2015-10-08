@@ -1,0 +1,5 @@
+.ProductsGrid-repetition {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
