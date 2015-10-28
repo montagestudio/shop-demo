@@ -1,0 +1,1 @@
+montageDefine("40094f0","ui/products-grid.reel/products-grid",{dependencies:["montage/ui/component"],factory:function(e,o){var n=e("montage/ui/component").Component;o.ProductsGrid=n.specialize({constructor:{value:function(){this.super()}}})}});

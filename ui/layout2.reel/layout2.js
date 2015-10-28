@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.Layout2=Component.specialize();

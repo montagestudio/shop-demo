@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="products-grid-item.css" />
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"owner"},"imageElement":{"#":"image"}},"bindings":{"background":{"<-":"@owner.product.background"},"image":{"<-":"@owner.product.image"}}},"brand":{"prototype":"montage/ui/text.reel","properties":{"element":{"#":"brand"}},"bindings":{"value":{"<-":"@owner.product.brand"}}},"description":{"prototype":"montage/ui/text.reel","properties":{"element":{"#":"description"}},"bindings":{"value":{"<-":"@owner.product.description"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductsGridItem">
+        <div class="ProductsGridItem-info">
+            <div data-montage-id="image" class="ProductsGridItem-image"></div>
+            <div data-montage-id="brand" class="ProductsGridItem-brand"></div>
+            <div data-montage-id="description" class="ProductsGridItem-description"></div>
+        </div>
+    </div>
+
+
+</body></html>

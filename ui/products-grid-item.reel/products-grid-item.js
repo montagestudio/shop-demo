@@ -1,0 +1,1 @@
+var Component=require("montage/ui/component").Component;exports.ProductsGridItem=Component.specialize({_image:{value:null},image:{get:function(){return this._image},set:function(e){this._image!==e&&(this._image=e,e&&(this.needsDraw=!0))}},draw:{value:function(){this._image&&(this.imageElement.style.backgroundImage="url(assets/"+this._image+")")}}});

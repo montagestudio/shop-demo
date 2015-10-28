@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="products-grid.css" />
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"owner"}}},"repetition":{"prototype":"montage/ui/repetition.reel","properties":{"element":{"#":"repetition"}},"bindings":{"content":{"<-":"@owner.content"}}},"productsGridItem":{"prototype":"ui/products-grid-item.reel","properties":{"element":{"#":"productsGridItem"}},"bindings":{"product":{"<-":"@repetition:iteration.object"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductsGrid">
+        <div data-montage-id="repetition" class="ProductsGrid-repetition">
+            <div data-montage-id="productsGridItem"></div>
+        </div>
+    </div>
+
+
+</body></html>

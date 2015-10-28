@@ -1,0 +1,1 @@
+montageDefine("40094f0","ui/products-carousel2.reel/products-carousel2",{dependencies:["montage/ui/component"],factory:function(e,o){var n=e("montage/ui/component").Component;o.ProductsCarousel2=n.specialize({constructor:{value:function(){this.super()}}})}});

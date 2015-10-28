@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Main</title>
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"main"}}},"layout":{"prototype":"ui/layout.reel","properties":{"element":{"#":"layout"}}},"products":{"prototype":"core/products"},"header":{"prototype":"ui/header.reel","properties":{"element":{"#":"header"}}},"carousel":{"prototype":"ui/products-carousel.reel","properties":{"element":{"#":"carousel"}},"bindings":{"content":{"<-":"@products.highlighted"}}},"carousel2":{"prototype":"ui/products-carousel2.reel","properties":{"element":{"#":"carousel2"}},"bindings":{"content":{"<-":"@products.topSellers"}}},"grid":{"prototype":"ui/products-grid.reel","properties":{"element":{"#":"grid"}},"bindings":{"content":{"<-":"@products.all"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="main" class="Main">
+        <div data-montage-id="layout">
+            <div data-arg="header" data-montage-id="header"></div>
+            <div data-arg="block1" data-montage-id="carousel"></div>
+            <div data-arg="block2" data-montage-id="carousel2"></div>
+            <div data-arg="block3" data-montage-id="grid"></div>
+        </div>
+    </div>
+
+
+</body></html>

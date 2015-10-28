@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="products-carousel2.css" />
+    <script type="text/montage-serialization">{"owner":{"properties":{"element":{"#":"owner"}}},"flow":{"prototype":"montage/ui/flow.reel","properties":{"element":{"#":"flow"},"isCameraEnabled":false,"elasticScrollingSpeed":0.6,"stride":1,"sceneScaleX":{"numerator":"1","denominator":"300"},"sceneScaleY":{"numerator":"1","denominator":"1"},"sceneOffsetTop":0,"sceneOffsetLeft":25,"linearScrollingVector":[-150,0],"paths":[{"knots":[{"knotPosition":[-300,0,0],"nextHandlerPosition":[-200,0,0],"previousDensity":2,"nextDensity":2,"rotateY":0},{"previousHandlerPosition":[-100,0,0],"knotPosition":[0,0,0],"nextHandlerPosition":[100,0,0],"previousDensity":2,"nextDensity":2,"rotateY":0},{"previousHandlerPosition":[200,0,0],"knotPosition":[300,0,0],"previousDensity":2,"nextDensity":2,"rotateY":0}],"headOffset":1.5,"tailOffset":2.5,"units":{"rotateY":"rad"}}]},"bindings":{"sceneScaleX.numerator":{"<-":"viewportWidth"},"content":{"<-":"@owner.content"}}},"productsCarousel2Item":{"prototype":"ui/products-carousel2-item.reel","properties":{"element":{"#":"productsCarousel2Item"}},"bindings":{"product":{"<-":"@flow:iteration.object"}}}}</script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductsCarousel2">
+        <div data-montage-id="flow" class="ProductsCarousel2-flow">
+            <div data-montage-id="productsCarousel2Item"></div>
+        </div>
+    </div>
+
+
+</body></html>

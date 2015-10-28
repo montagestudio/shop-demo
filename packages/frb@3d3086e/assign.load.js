@@ -1,0 +1,1 @@
+montageDefine("3d3086e","assign",{dependencies:["./parse","./compile-assigner","./scope"],factory:function(e,t,n){function i(e,t,n,i,s,l){var u;u="string"==typeof t?r(t):t;var c=o(u),h=new a(e);return h.parameters=i,h.document=s,h.components=l,c(n,h)}var r=e("./parse"),o=e("./compile-assigner"),a=e("./scope");n.exports=i}});

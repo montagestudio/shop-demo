@@ -1,0 +1,1 @@
+montageDefine("40094f0","package.json",{exports:{name:"shop-demo",version:"0.1.0",dependencies:{montage:"~0.15.0"},devDependencies:{"montage-testing":"~0.4.0"},exclude:["run-tests.html","test"],bundle:["ui/main.reel"],hash:"40094f0",mappings:{montage:{name:"montage",hash:"aff95ef",location:"packages/montage@aff95ef/"}},production:!0,useScriptInjection:!0}});
