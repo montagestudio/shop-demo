@@ -1,4 +1,7 @@
-.ProductsCarousel2-flow .montage-Flow-Repetition > div {
+
+/* .montage-Flow.camera-disabled .montage-Flow-Repetition > div { */
+
+.montage-Flow.ProductsCarousel2-flow .montage-Flow-Repetition > div {
     position: absolute;
     top: 0;
     left: 0;
