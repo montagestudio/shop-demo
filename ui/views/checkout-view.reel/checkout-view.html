@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="checkout-view.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            },
+            "listeners":[
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "repetition": {
+            "prototype": "montage/ui/repetition.reel",
+            "values": {
+                "element": {"#": "repetition"},
+                "content": {"<-": "@owner.order"}
+            }
+        },
+        "quantity": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "quantity"},
+                "value": {"<-": "@repetition:iteration.object.quantity"}
+            }
+        },
+        "item": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "item"},
+                "value": {"<-": "@repetition:iteration.object.product.name"}
+            }
+        },
+        "total": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "total"},
+                "value": {"<-": "@owner.total"}
+            }
+        },
+        "firstname": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "firstname"},
+                "value": {"<->": "@owner.form.firstname"}
+            }
+        },
+        "lastname": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "lastname"},
+                "value": {"<->": "@owner.form.lastname"}
+            }
+        },
+        "email": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "email"},
+                "value": {"<->": "@owner.form.email"}
+            }
+        },
+        "address": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "address"},
+                "value": {"<->": "@owner.form.address"}
+            }
+        },
+        "city": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "city"},
+                "value": {"<->": "@owner.form.city"}
+            }
+        },
+        "state": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "state"},
+                "value": {"<->": "@owner.form.state"}
+            }
+        },
+        "zipcode": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "zipcode"},
+                "value": {"<->": "@owner.form.zipcode"}
+            }
+        },
+        "cardNumber": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "cardNumber"},
+                "value": {"<->": "@owner.form.cardNumber"}
+            }
+        },
+        "expirationDate": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "expirationDate"},
+                "value": {"<->": "@owner.form.expirationDate"}
+            }
+        },
+        "cvv": {
+            "prototype": "montage/ui/text-field.reel",
+            "values": {
+                "element": {"#": "cvv"},
+                "value": {"<->": "@owner.form.cvv"}
+            }
+        },
+        "cancel": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "cancel"}
+            }
+        },
+        "confirm": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "confirm"},
+                "enabled": {"<-": "@owner.form.isValid"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="CheckoutView">
+        <form>
+            <fieldset>
+                <legend>Order Summary:</legend>
+                <div data-montage-id="repetition" class="CheckoutView-listItem">
+                    <div>
+                        <span data-montage-id="quantity"></span>x
+                        <span data-montage-id="item"></span>
+                    </div>
+                </div>
+                <span>Total:</span>
+                <span data-montage-id="total"></span>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information:</legend>
+                <div class="field">
+                    <label>Firstname:</label>
+                    <input data-montage-id="firstname" type="text" required>
+                </div>
+                <div class="field">
+                    <label>Lastname:</label>
+                    <input data-montage-id="lastname" type="text" required>
+                </div>
+                <div class="field">
+                    <label>Email:</label>
+                    <input data-montage-id="email" type="text" required>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Shipping Address:</legend>
+                <div class="field">
+                        <label>Address:</label>
+                        <input data-montage-id="address" type="text" required>
+                    </div>
+                    <div class="field">
+                        <label>City:</label>
+                        <input data-montage-id="city" type="text" required>
+                    </div>
+                    <div class="field">
+                        <label>State:</label>
+                        <input data-montage-id="state" type="text" required>
+                    </div>
+                    <div class="field">
+                        <label>Zip Code:</label>
+                        <input data-montage-id="zipcode" type="text" required>
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>Payment Information:</legend>
+                <div class="field">
+                        <label>Card Number:</label>
+                        <input data-montage-id="cardNumber" type="text" required>
+                    </div>
+                    <div class="field">
+                        <label>Expiration Date: (MMYY)</label>
+                        <input data-montage-id="expirationDate" type="text" required>
+                    </div>
+                    <div class="field">
+                        <label>CVV:</label>
+                        <input data-montage-id="cvv" type="text" required>
+                    </div>
+            </fieldset>
+            <div class="CheckoutView-actions">
+                <div data-montage-id="cancel" class="CheckoutView-cancel">
+                    Cancel
+                </div>
+                <div data-montage-id="confirm" class="CheckoutView-confirm">
+                    Confirm
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

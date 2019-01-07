@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="products-view.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            },
+            "listeners":[
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "carousel": {
+            "prototype": "ui/components/products-carousel.reel",
+            "values": {
+                "element": {"#": "carousel"},
+                "content": {"<-": "@owner.highlighted"}
+            }
+        },
+        "grid": {
+            "prototype": "ui/components/products-grid.reel",
+            "values": {
+                "element": {"#": "grid"},
+                "content": {"<-": "@owner.products"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Products">
+        <div class="Layout-block1">
+            <div data-montage-id="carousel"></div>
+        </div>
+        <div class="Layout-block3">
+            <div data-montage-id="grid"></div>
+        </div>
+    </div>
+</body>
+</html>

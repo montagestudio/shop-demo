@@ -1,0 +1,70 @@
+.ProductsGridItem {
+    position: relative;
+    width: 30%;
+    max-width: 33.3333%;
+    box-sizing: border-box;
+    flex-grow: 1;
+    height: 180px;
+    color: #777;
+    cursor: pointer;
+}
+
+.ProductsGridItem-info {
+    font-size: 13px;
+    line-height: 15px;
+    padding: 17px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, .05);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .04), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ProductsGridItem-brand {
+    margin-top: 12px; 
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.ProductsGridItem-image {
+    min-height: 86px;
+    min-width: 24px;
+    box-sizing: border-box;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.ProductsGridItem-price {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    color: #444;
+}
+
+@media screen and (max-width: 320px) {
+
+    .ProductsGridItem {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+
+    .ProductsGridItem {
+        width: 50%;
+        max-width: 50%;
+    }
+
+}

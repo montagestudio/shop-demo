@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="cart-view.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            },
+            "listeners":[
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "table": {
+            "prototype": "ui/components/cart-table.reel",
+            "values": {
+                "element": {
+                    "#": "table"
+                },
+                "content": {"<-": "@owner.order"}
+            }
+        },
+        "empty": {
+            "prototype": "montage/ui/component",
+            "values": {
+                "element": {"#": "empty"},
+                "hasTemplate": false,
+                "classList.has('hide')": {"<-": "@owner.order.length > 0"}
+            }
+        },
+        "total": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "total"},
+                "value": {"<-": "@owner.total"}
+            }
+        },
+        "clear": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "clear"},
+                "enabled": {"<-": "@owner.order.length > 0"}
+            }
+        },
+        "checkout": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "checkout"},
+                "enabled": {"<-": "@owner.order.length > 0"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="Cart">
+        <h3>Your Cart:</h3>
+        <div class="Cart-table-container">
+            <div data-montage-id="table" data-arg="table"></div>
+            <div data-montage-id="empty" class="Cart-empty">
+                Empty
+            </div>
+        </div>
+        <div class="Cart-total">
+            <span>Total:</span>
+            <span data-montage-id="total"></span>
+        </div>
+        <div class="Cart-actions">
+            <div data-montage-id="clear" class="Cart-clear">
+                Clear
+            </div>
+            <div data-montage-id="checkout" class="Cart-checkout">
+                Checkout
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

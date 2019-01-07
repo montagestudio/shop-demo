@@ -1,0 +1,37 @@
+.ProductsCarousel2Item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid white;
+    color: white;
+}
+
+.ProductsCarousel2Item-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    bottom: 0;
+    box-sizing: border-box;
+    border: 17px solid transparent;
+    background-color: rgba(255, 255, 255, .6);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+@media (max-width: 749px) {
+
+    .ProductsCarousel2Item-image {
+        top: 18px;
+        right: 18%;
+        left: 18%;
+        bottom: 0;
+        width: auto;
+        border: 10px solid transparent;
+        background-color: transparent;
+    }
+
+}

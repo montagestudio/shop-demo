@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="product-detail-view.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"}
+            },
+            "listeners":[
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "carousel": {
+            "prototype": "ui/components/products-carousel2.reel",
+            "values": {
+                "element": {"#": "carousel"},
+                "content": {"<-": "@owner.product.picture"}
+            }
+        },
+        "back": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "back"}
+            }
+        },
+        "brand": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "brand"},
+                "value": {"<-": "@owner.product.name"}
+            }
+        },
+        "price": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "price"},
+                "value": {"<-": "@owner.product.unitCost"}
+            }
+        },
+        "substitution": {
+            "prototype": "montage/ui/substitution.reel",
+            "values": {
+                "element": {"#": "substitution"},
+                "switchValue": {"<-": "!!@owner.product.inStock ? 'yes': 'no'"}
+            }
+        },
+         "size": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "size"},
+                "value": {"<-": "@owner.product.size"}
+            }
+        },
+         "designer": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "designer"},
+                "value": {"<-": "@owner.product.designer"}
+            }
+        },
+         "vendor": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "vendor"},
+                "value": {"<-": "@owner.product.vendor"}
+            }
+        },
+        "description": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "description"},
+                "value": {"<-": "@owner.product.description"}
+            }
+        },
+        "buy": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "buy"},
+                "detail.has('product')": {"<-": "@owner.product"},
+                "disabled": {"<-": "!@owner.product.inStock"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductDetail">
+        <button data-montage-id="back" class="ProductDetail-back">
+            <svg aria-hidden="true" data-prefix="fal" data-icon="chevron-left" class="svg-inline--fa fa-chevron-left fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M238.475 475.535l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L50.053 256 245.546 60.506c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0L10.454 247.515c-4.686 4.686-4.686 12.284 0 16.971l211.051 211.05c4.686 4.686 12.284 4.686 16.97-.001z"></path></svg>
+            Back
+        </button>
+        <div data-montage-id="brand"
+            class="ProductDetail-brand"></div>
+        <div class="Layout-block2">
+            <div data-montage-id="carousel"></div>
+        </div>
+        <div class="ProductDetail-info">
+            <div data-montage-id="price"
+                class="ProductDetail-price"></div>
+            <div class="ProductDetail-actions">
+                <div data-montage-id="substitution" class="ProductDetail-stock-state">
+                    <div data-arg="yes" class="ProductDetail-stock">In Stock</div>
+                    <div data-arg="no" class="ProductDetail-outStock">Out of Stock</div>
+                </div>
+                <button data-montage-id="buy" class="ProductDetail-buy">Buy</button>
+            </div>
+            <h3>Product Information:</h3>
+            <div>
+                Size: <span data-montage-id="size"
+                class="ProductDetail-size"></span>
+            </div>
+            <div>
+                Vendor: <span data-montage-id="vendor"
+                class="ProductDetail-vendor"></span>
+            <div>
+               Designer: <span data-montage-id="designer"
+                class="ProductDetail-designer"></span>
+            </div>
+            
+            <h3>Product Description:</h3>
+            <div data-montage-id="description"
+                class="ProductDetail-description"></div>
+        </div>
+    </div>
+</body>
+</html>

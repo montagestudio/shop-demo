@@ -1,0 +1,10 @@
+.CartItem-quantity {
+    text-align: right;
+}
+
+.CartItem-delete {
+    width: 12px;
+    height: 12px;
+    float: right;
+    cursor: pointer;
+}

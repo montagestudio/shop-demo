@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="products-carousel-item.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "imageElement": {"#": "image"},
+                "blurredImageElement": {"#": "blurredImage"},
+                "image": {"<-": "@owner.product.picture.0"}
+            }
+        },
+        "brand": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "brand"},
+                "value": {"<-": "@owner.product.name"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductsCarouselItem">
+        <div data-montage-id="blurredImage" class="ProductsCarouselItem-blurredImage" data-color="#E25C5F"></div>
+        <div data-montage-id="brand" class="ProductsCarouselItem-brand"></div>
+        <div class="ProductsCarouselItem-info">
+            <div data-montage-id="color" class="ProductsCarouselItem-color"></div>
+            <div data-montage-id="description" class="ProductsCarouselItem-description"></div>
+        </div>
+        <div data-montage-id="image" class="ProductsCarouselItem-image"></div>
+    </div>
+</body>
+</html>

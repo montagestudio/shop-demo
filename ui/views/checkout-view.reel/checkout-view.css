@@ -1,0 +1,66 @@
+.CheckoutView {
+    padding: 16px;
+}
+
+.CheckoutView-listItem {
+    margin-bottom: 16px;
+}
+
+.CheckoutView fieldset { 
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 6px;
+    margin: 32px 0;
+    padding: 16px;
+}
+
+.CheckoutView legend {
+    padding: 4px 8px;
+    color: #fff;
+    background: #C38989;
+    text-align: right;
+}
+
+.CheckoutView .field {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
+
+.CheckoutView .field > label {
+    margin-bottom: 8px;
+}
+
+.CheckoutView input {
+    height: 22px;
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 3px;
+    outline: none;
+}
+
+.CheckoutView input:focus {
+    border: 1px solid #44A3DC;
+}
+
+.CheckoutView-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.CheckoutView-actions > div {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.CheckoutView-cancel {
+    color: #CD5353;
+}
+
+.CheckoutView-confirm {
+    background: #44A3DC;
+    color: #fff;
+    margin-left: 16px;
+}
+
+.CheckoutView-confirm.montage--disabled {
+    opacity: 0.5;
+}

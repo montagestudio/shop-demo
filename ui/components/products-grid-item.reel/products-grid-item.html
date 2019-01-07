@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="products-grid-item.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "values": {
+                "element": {"#": "owner"},
+                "imageElement": {"#": "image"},
+                "pictures": {"<-": "@owner.product.picture"}
+            }
+        },
+         "pressComposer": {
+            "prototype": "montage/composer/press-composer",
+            "values": {
+                "component": {"@": "productItem"},
+                "identifier": "productDetail"
+            },
+            "listeners":[
+                {
+                    "type": "press",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "productItem": {
+            "prototype": "montage/ui/component",
+            "values": {
+                "element": {"#": "productItem"},
+                "hasTemplate": false
+            }
+        },
+        "brand": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "brand"},
+                "value": {"<-": "@owner.product.name"}
+            }
+        },
+        "price": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "price"},
+                "value": {"<-": "@owner.product.unitCost"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ProductsGridItem">
+        <div  data-montage-id="productItem" class="ProductsGridItem-info">
+            <div data-montage-id="image" class="ProductsGridItem-image"></div>
+            <div data-montage-id="brand" class="ProductsGridItem-brand"></div>
+            <div data-montage-id="price" class="ProductsGridItem-price"></div>
+        </div>
+    </div>
+</body>
+</html>

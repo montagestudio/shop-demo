@@ -1,0 +1,28 @@
+.CartTable {
+    display: table ;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.CartTable-header {
+    display: table-header-group;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.CartTable-cell.brand {
+    width: 265px;
+}
+
+.CartTable-repetition {
+    display: table-row-group ;
+}
+
+.CartTable-row {
+    display: table-row;
+}
+
+.CartTable-cell {
+    display: table-cell;
+    padding: 8px 0;
+}

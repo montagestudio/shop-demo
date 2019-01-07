@@ -1,17 +1,18 @@
 {
-    "name": "shop-demo",
-    "version": "0.1.0",
-    "dependencies": {
-        "montage": "montagejs/montage.git#master"
-    },
-    "devDependencies": {
-        "montage-testing": "~0.4.0"
-    },
-    "exclude": [
-        "run-tests.html",
-        "test"
-    ],
-    "bundle": [
-        "ui/main.reel"
-    ]
+  "name": "shop-demo",
+  "version": "0.1.0",
+  "dependencies": {
+    "montage": "montagejs/montage.git#master",
+    "uuid-browser": "^3.1.0"
+  },
+  "devDependencies": {
+    "montage-testing": "~0.4.0"
+  },
+  "exclude": [
+    "run-tests.html",
+    "test"
+  ],
+  "bundle": [
+    "ui/main.reel"
+  ]
 }

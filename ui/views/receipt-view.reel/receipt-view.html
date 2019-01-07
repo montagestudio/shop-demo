@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="receipt-view.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            },
+            "listeners":[
+                {
+                    "type": "action",
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "receipt": {
+            "prototype": "montage/ui/text.reel",
+            "values": {
+                "element": {"#": "receipt"},
+                "value": {"<-": "@owner.receipt"}
+            }
+        },
+        "done": {
+            "prototype": "montage/ui/button.reel",
+            "values": {
+                "element": {"#": "done"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="ReceiptView">
+        <h3>
+            Thank You!
+        </h3>
+        <p>
+            Please Keep your receipt
+        </p>
+        <div data-montage-id="receipt" class="ReceiptView-receipt"></div>
+        <div class="ReceiptView-actions">
+            <div data-montage-id="done" class="ReceiptView-done">Done</div>
+        </div>
+    </div>
+</body>
+</html>

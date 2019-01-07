@@ -1,0 +1,60 @@
+.Header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    color: #444;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+}
+
+.Header-logo {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+}
+
+.Header-cart {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-self: flex-end;
+    width: 56px;
+    z-index: 102;
+    padding-right: 24px;
+    color: #666;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.HeaderCart-counter {
+    font-size: 10px;
+    color: #89C399;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.Header-cart * {
+    pointer-events: none;
+}
+
+@media (min-width: 769px) {
+
+    .Header-logo {
+        /* justify-content: flex-start; */
+    }
+
+}

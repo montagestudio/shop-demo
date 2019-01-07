@@ -1,0 +1,20 @@
+.ReceiptView {
+    padding: 16px;
+}
+
+.ReceiptView-receipt {
+    color: #7AA37A;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.ReceiptView-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ReceiptView-done {
+    background: #44A3DC;
+    color: #fff;
+    padding: 4px 8px;
+}

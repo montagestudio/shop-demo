@@ -1,0 +1,100 @@
+.ProductDetail {
+    position: relative;
+    box-sizing: border-box;
+    flex-grow: 1;
+    color: #777;
+}
+
+.Layout-block2 {
+    position: relative;
+    height: 302px;
+}
+
+.ProductDetail-back {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    display: flex;
+    height: 16px;
+    align-items: center;
+    color: #DD9E85;
+    margin-top: 16px;
+    outline: none;
+    padding-left: 0;
+    cursor: pointer;
+}
+
+.ProductDetail-back > svg {
+    margin-right: 8px;
+    width: 8px;
+    height: 12px;
+}
+
+.ProductDetail-actions {
+    margin: 16px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ProductDetail-stock-state {
+    margin-right: auto;
+}
+
+.ProductDetail-stock,
+.ProductDetail-outStock {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #3D4144;
+}
+
+.ProductDetail-stock {
+    color: #7AA37A;
+}
+
+.ProductDetail-outStock {
+    color: #F74729;
+}
+
+.ProductDetail-buy {
+    background: #C38989;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 4px 6px;
+    cursor: pointer;
+    outline: none;
+}
+
+.ProductDetail-buy.montage--disabled {
+    opacity: 0.5;
+}
+
+.ProductDetail-brand {
+    margin: 16px 0;
+    font-size: 22px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #3D4144;
+}
+
+.ProductDetail-price {
+    margin-top: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    text-align: right;
+    color: #3D4144;
+}
+
+@media (max-width: 767px) {
+
+    .Layout-block2 {
+        position: relative;
+        height: 302px;
+    }
+}
