@@ -9,7 +9,12 @@
             "owner": {
                 "values": {
                     "element": {"#": "main"},
-                    "succession": {"@": "succession"}
+                    "succession": {"@": "succession"},
+                    "productsView": {"@": "productsView"},
+                    "productDetailView": {"@": "productDetailView"},
+                    "cartView": {"@": "cartView"},
+                    "checkoutView": {"@": "checkoutView"},
+                    "receiptView": {"@": "receiptView"}
                 }
             },
             "header": {
@@ -21,9 +26,48 @@
             "succession": {
                 "prototype": "montage/ui/succession.reel",
                 "values": {
-                    "element": {"#": "succession"}
+                    "element": {"#": "succession"},
+                    "contentBuildInAnimation": {
+                        "fromCssClass": "buildInFrom",
+                        "cssClass": "buildIn"
+                    },
+                    "contentBuildOutAnimation": {
+                        "cssClass": "buildOut",
+                        "toCssClass": "buildOutTo"
+                    }
+                }
+            },
+            "productsView": {
+                "prototype": "../views/products-view.reel",
+                "values": {
+                    "element": {"#": "products-view"}
+                }
+            },
+            "productDetailView": {
+                "prototype": "../views/product-detail-view.reel",
+                "values": {
+                    "element": {"#": "product-detail-view"}
+                }
+            },
+            "cartView": {
+                "prototype": "../views/cart-view.reel",
+                "values": {
+                    "element": {"#": "cart-view"}
+                }
+            },
+            "checkoutView": {
+                "prototype": "../views/checkout-view.reel",
+                "values": {
+                    "element": {"#": "checkout-view"}
+                }
+            },
+            "receiptView": {
+                "prototype": "../views/receipt-view.reel",
+                "values": {
+                    "element": {"#": "receipt-view"}
                 }
             }
+
         }
     </script>
 </head>
@@ -33,7 +77,13 @@
             <div class="Layout-header">
                 <div data-montage-id="header"></div>
             </div>
-            <div data-montage-id="succession" class="Layout-body"></div>
+            <div data-montage-id="succession" class="Layout-body">
+                <div data-montage-id="products-view" class=""></div>
+                <div data-montage-id="product-detail-view" class=""></div>
+                <div data-montage-id="cart-view" class=""></div>
+                <div data-montage-id="checkout-view" class=""></div>
+                <div data-montage-id="receipt-view" class=""></div>    
+            </div>
         </div>
     </div>
 </body>
