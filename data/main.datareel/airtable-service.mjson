@@ -1,0 +1,24 @@
+{
+    "root": {
+        "prototype": "montage-airtable/data/main.datareel/service/airtable-service",
+        "values": {
+            "name": "AirtableService",
+            "exportName": "AirtableService",
+            "APIKey":"keypOR745TkuhvJBV",
+            "mappings": [
+                {"@": "furnitureMapping"}
+            ],
+            "types": [
+                {"@": "furniture"}
+            ]
+        }
+    },
+
+    "furniture": {
+        "object": "data/main.datareel/model/furniture.mjson"
+    },
+
+    "furnitureMapping": {
+        "object": "data/main.datareel/mapping/furniture-mapping.mjson"
+    }
+}

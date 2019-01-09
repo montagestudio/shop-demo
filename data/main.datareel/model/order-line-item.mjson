@@ -1,0 +1,74 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/module-object-descriptor",
+        "values": {
+            "name": "OrderLineItem",
+            "propertyDescriptors": [
+                {"@": "name"},
+                {"@": "quantity"},
+                {"@": "furnitureItem"},
+                {"@": "price"},
+                {"@": "totalCost"},
+                {"@": "belongsToOrder"}
+            ],
+            "objectDescriptorModule": {
+                "%": "data/main.datareel/model/order-line-item.mjson"
+            },
+            "exportName": "OrderLineItem",
+            "module": {
+                "%": "data/main.datareel/model/order-line-item"
+            }
+        }
+    },
+    "name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "name",
+            "valueType": "string"
+        }
+    },
+    "quantity": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "quantity",
+            "valueType": "number"
+        }
+    },
+    "furnitureItem": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "furnitureItem",
+            "cardinality": 1,
+            "valueDescriptor": {"@": "furniture_descriptor"}       
+        }
+    },
+    "price": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "price",
+            "valueType": "number",
+            "definition": "furnitureItem.unitCost"
+        }
+    },
+    "totalCost": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "totalCost",
+            "valueType": "number"
+        }
+    },
+    "belongsToOrder": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "belongsToOrder",
+            "cardinality": -1,
+            "valueDescriptor": {"@": "client-order_descriptor"}       
+        }
+    },
+    "furniture_descriptor": {
+        "object": "data/main.datareel/model/furniture.mjson"
+    },
+    "client-order_descriptor": {
+        "object": "data/main.datareel/model/client-order.mjson"
+    }
+}

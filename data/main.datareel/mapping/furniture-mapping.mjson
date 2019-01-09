@@ -1,0 +1,67 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "FurnitureObjectDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "Name"},
+                    "orders": {
+                                    "<->": "Orders",
+                                    "converter": {"@": "ordersForeignKeyConverter"}},
+                    "pictures": {"<->": "Pictures"},
+                    "description": {"<->": "Description"},
+                    "link": {"<->": "Link"},
+                    "type": {"<->": "Type"},
+                    "unitCost": {"<->": "Unit Cost"},
+                    "materialsAndFinishes": {"<->": "Materials and Finishes"},
+                    "settings": {"<->": "Settings"},
+                    "sizeWxLxH": {"<->": "Size (WxLxH)"},
+                    "notes": {"<->": "Notes"},
+                    "schematics": {"<->": "Schematic"},
+                    "vendors": {
+                                    "<->": "Vendor",
+                                    "converter": {"@": "vendorsForeignKeyConverter"}},
+                    "designers": {
+                                    "<->": "Designer",
+                                    "converter": {"@": "designersForeignKeyConverter"}},
+                    "inStock": {"<->": "In Stock"},
+                    "totalUnitsSold": {"<->": "Total Units Sold"},
+                    "grossSales": {"<->": "Gross Sales"}
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "requisitePropertyNames": [
+                "id"
+            ]
+        }
+    },
+
+    "FurnitureObjectDescriptor": {
+        "object": "data/main.datareel/model/furniture.mjson"
+    },
+    "ordersForeignKeyConverter": {
+        "prototype": "montage/data/converter/raw-property-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "vendorsForeignKeyConverter": {
+        "prototype": "montage/data/converter/raw-property-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    },
+    "designersForeignKeyConverter": {
+        "prototype": "montage/data/converter/raw-property-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+
+
+}

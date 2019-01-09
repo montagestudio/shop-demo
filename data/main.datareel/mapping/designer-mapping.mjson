@@ -1,0 +1,38 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "DesignerDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "name": {"<->": "Name"}
+                    "furniture": {"<->": "furniture",
+                    "converter": {"@": "furnitureForeignKeyConverter"},
+                    "background": {"<->": "Background"}
+
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+           
+            "requisitePropertyNames": [
+                "id"
+            ]
+        }
+    },
+
+    "DesignerDescriptor": {
+        "object": "data/main.datareel/model/designer.mjson"
+    },
+    "furnitureForeignKeyConverter": {
+        "prototype": "montage/data/converter/raw-property-value-to-object-converter",
+        "values": {
+            "convertExpression": "$.has(id)"
+        }
+    }
+
+
+}

@@ -1,0 +1,47 @@
+{
+    "root": {
+        "prototype": "montage/data/service/expression-data-mapping",
+        "values": {
+            "objectDescriptor": {"@": "VendorDescriptor"},
+            "rawDataPrimaryKeys":["id"],
+            "objectMapping": {
+                "rules": {
+                    "furniture": {"<->": "furniture",
+                    "converter": {"@": "furnitureForeignKeyConverter"},
+                    "logos": {"<->": "logo"}
+
+                }
+            },
+            "rawDataMapping": {
+                "rules": {
+                }
+            },
+            "detections": {
+                        "<-": "{sensorId: id, rawData: icd101aReport.detection}",
+                        "converter": {"@": "detectionsForeignKeyConverter"}
+                    }
+
+            "requisitePropertyNames": [
+                "id"
+            ]
+        }
+    },
+
+    "VendorDescriptor": {
+        "object": "data/main.datareel/model/vendor.mjson"
+    },
+    "furnitureForeignKeyConverter": {
+        "prototype": "montage/data/converter/raw-property-value-to-object-converter",
+        "values": {
+            "convertE   xpression": "$.has(id)"
+        }
+    },
+    "detectionsForeignKeyConverter": {
+        "prototype": "montage/data/converter/raw-property-value-to-object-converter",
+        "properties": {
+            "convertExpression": "sensorId == $.id && rawData == $.icd101aReport.detection"
+        }
+    }
+
+
+}

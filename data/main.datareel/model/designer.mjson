@@ -1,0 +1,45 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/module-object-descriptor",
+        "values": {
+            "name": "Designer",
+            "propertyDescriptors": [
+                {"@": "name"},
+                {"@": "furniture"},
+                {"@": "background"}
+            ],
+            "objectDescriptorModule": {
+                "%": "data/main.datareel/model/designer.mjson"
+            },
+            "exportName": "Designer",
+            "module": {
+                "%": "data/main.datareel/model/designer"
+            }
+        }
+    },
+    "name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "id",
+            "valueType": "string"
+        }
+    },
+    "furniture": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "furniture",
+            "cardinality": -1,
+            "valueDescriptor": {"@": "furniture_descriptor"}       
+        }
+    },
+    "background": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "background",
+            "valueType": "string"
+        }
+    },
+    "furniture_descriptor": {
+        "object": "data/main.datareel/model/furniture.mjson"
+    }
+}

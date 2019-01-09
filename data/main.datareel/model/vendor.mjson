@@ -1,0 +1,106 @@
+{
+    "root": {
+        "prototype": "montage/core/meta/module-object-descriptor",
+        "values": {
+            "name": "Vendor",
+            "propertyDescriptors": [
+                {"@": "name"},
+                {"@": "furnitures"},
+                {"@": "notes"},
+                {"@": "logos"},
+                {"@": "salesContact"},
+                {"@": "vendorPhoneNumber"},
+                {"@": "closestShowroomAddress"},
+                {"@": "catalogLink"},
+                {"@": "shippingDetails"}
+            ],
+            "objectDescriptorModule": {
+                "%": "data/main.datareel/model/vendor.mjson"
+            },
+            "exportName": "Vendor",
+            "module": {
+                "%": "data/main.datareel/model/vendor"
+            }
+        }
+    },
+
+    "name": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "id",
+            "valueType": "string"
+        }
+    },
+    "furnitures": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "furnitures",
+            "cardinality": -1,
+            "valueDescriptor": {"@": "furniture_descriptor"}       
+        }
+    },
+    "notes": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "notes",
+            "valueType": "string"
+        }
+    },
+    "logos": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "logos",
+            "cardinality": -1,
+            "valueDescriptor": {"@": "attachment_descriptor"}       
+        }
+    },
+    "salesContact": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "salesContact",
+            "valueType": "string",
+            "cardinality": -1,
+            "valueDescriptor": {"@": "vendor_contact_descriptor"}       
+       }
+    },
+    "vendorPhoneNumber": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "vendorPhoneNumber",
+            "valueType": "string"
+        }
+    },
+    "closestShowroomAddress": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "closestShowroomAddress",
+            "valueType": "string"
+        }
+    },
+    "catalogLink": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "catalogLink",
+            "valueType": "string"
+        }
+    },
+    "shippingDetails": {
+        "prototype": "montage/core/meta/property-descriptor",
+        "values": {
+            "name": "shippingDetails",
+            "valueType": "array"
+        }
+    },
+
+    "furniture_descriptor": {
+        "object": "data/main.datareel/model/furniture.mjson"
+    },
+    "attachment_descriptor": {
+        "object": "data/main.datareel/model/attachment.mjson"
+    },
+    "vendor_contact_descriptor": {
+        "object": "data/main.datareel/model/vendor-contact.mjson"
+    }
+
+
+}
