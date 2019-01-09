@@ -40,7 +40,8 @@
             "productsView": {
                 "prototype": "../views/products-view.reel",
                 "values": {
-                    "element": {"#": "products-view"}
+                    "element": {"#": "products-view"},
+                    "products": {"<-":"@owner.furnitureDataStream.data"}
                 }
             },
             "productDetailView": {
