@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
     "montage": "montagejs/montage.git#master",
-    "uuid-browser": "^3.1.0"
+    "uuid-browser": "^3.1.0",
+    "montage-airtable": "git+https://gitlab.com/benoitmarchant/montage-airtable.git#master"
   },
   "devDependencies": {
     "montage-testing": "~0.4.0"
