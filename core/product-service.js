@@ -431,13 +431,13 @@ var ProductService = (function () {
     ProductService.prototype.find = function (name) {
         return this.list().find(function (product) { return product.Name === name; });
     };
-    ProductService.prototype.highlighted = function () {
-        var highlighted = [];
+    ProductService.prototype.featured = function () {
+        var featured = [];
         for (var i = 0; i < 5; i++) {
             var index = Math.floor(Math.random() * 19);
-            highlighted.push(this.products[index]);
+            featured.push(this.products[index]);
         }
-        return highlighted;
+        return featured;
     };
     return ProductService;
 }());
