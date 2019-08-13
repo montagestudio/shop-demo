@@ -6,29 +6,31 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "name": {"<->": "Name"},
+                    "name": {"<->": "fields.Name"},
+                    "unitCost": {"<->": "fields.property('Unit Cost')", "debug":true},
                     "orders": {
-                                    "<->": "Orders",
+                                    "<->": "fields.Orders",
                                     "converter": {"@": "ordersForeignKeyConverter"}},
-                    "pictures": {"<->": "Pictures"},
-                    "description": {"<->": "Description"},
-                    "link": {"<->": "Link"},
-                    "type": {"<->": "Type"},
-                    "unitCost": {"<->": "Unit Cost"},
-                    "materialsAndFinishes": {"<->": "Materials and Finishes"},
-                    "settings": {"<->": "Settings"},
-                    "sizeWxLxH": {"<->": "Size (WxLxH)"},
-                    "notes": {"<->": "Notes"},
-                    "schematics": {"<->": "Schematic"},
+                    "pictures": {"<->": "fields.Picture",
+                                         "converter": {"@": "picturesConverter"},
+                                         "debug":true},
+                    "description": {"<->": "fields.Description"},
+                    "link": {"<->": "fields.Link"},
+                    "type": {"<->": "fields.Type"},
+                    "materialsAndFinishes": {"<->": "fields.property('Materials and Finishes')"},
+                    "settings": {"<->": "fields.Settings"},
+                    "sizeWxLxH": {"<->": "fields.property('Size (WxLxH)')"},
+                    "notes": {"<->": "fields.Notes"},
+                    "schematics": {"<->": "fields.Schematic"},
                     "vendors": {
-                                    "<->": "Vendor",
+                                    "<->": "fields.Vendor",
                                     "converter": {"@": "vendorsForeignKeyConverter"}},
                     "designers": {
-                                    "<->": "Designer",
+                                    "<->": "fields.Designer",
                                     "converter": {"@": "designersForeignKeyConverter"}},
-                    "inStock": {"<->": "In Stock"},
-                    "totalUnitsSold": {"<->": "Total Units Sold"},
-                    "grossSales": {"<->": "Gross Sales"}
+                    "inStock": {"<->": "fields.property('In Stock')"},
+                    "totalUnitsSold": {"<->": "fields.property('Total Units Sold')"},
+                    "grossSales": {"<->": "fields.property('Gross Sales')"}
                 }
             },
             "rawDataMapping": {
@@ -36,7 +38,7 @@
                 }
             },
             "requisitePropertyNames": [
-                "id"
+                "id","name","pictures","description","link","type","unitCost","sizeWxLxH","vendors","designers","inStock"
             ]
         }
     },
@@ -48,6 +50,11 @@
         "prototype": "montage/data/converter/raw-property-value-to-object-converter",
         "values": {
             "convertExpression": "$.has(id)"
+        }
+    },
+    "picturesConverter": {
+        "prototype": "montage/data/converter/raw-embedded-value-to-object-converter",
+        "values": {
         }
     },
     "vendorsForeignKeyConverter": {

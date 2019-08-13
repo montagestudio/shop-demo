@@ -1,4 +1,5 @@
-var Montage = require("montage").Montage;
+var Montage = require("montage").Montage,
+    OrderLineItem = require("./order-line-item").OrderLineItem;
 
 /**
  * @class Furniture
@@ -15,8 +16,19 @@ exports.Furniture = Montage.specialize(/** @lends Furniture.prototype */ {
     orders: {
         value: undefined
     },
+    _pictures: {
+        value: null
+    },
+
     pictures: {
-        value: undefined
+        get: function () {
+            return this._pictures;
+        },
+        set: function (value) {
+            if (this._pictures !== value) {
+                this._pictures = value;
+            }
+        }
     },
     description: {
         value: undefined
@@ -45,13 +57,35 @@ exports.Furniture = Montage.specialize(/** @lends Furniture.prototype */ {
     schematics: {
         value: undefined
     },            
+    _vendors: {
+        value: null
+    },
+
     vendors: {
-        value: undefined
-    },            
+        get: function () {
+            return this._vendors;
+        },
+        set: function (value) {
+            if (this._vendors !== value) {
+                this._vendors = value;
+            }
+        }
+    },
     designers: {
         value: undefined
     },            
     inStock: {
+        get: function () {
+            return this._inStock;
+        },
+        set: function (value) {
+            if (this._inStock !== value) {
+                this._inStock = value;
+            }
+        }
+    },
+
+    _inStock: {
         value: undefined
     },            
     totalUnitsSold: {

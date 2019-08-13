@@ -2,7 +2,7 @@
     "root": {
         "prototype": "montage/core/meta/module-object-descriptor",
         "values": {
-            "name": "Vendor",
+            "name": "Client",
             "propertyDescriptors": [
                 {"@": "name"},
                 {"@": "notes"},
@@ -12,15 +12,18 @@
                 {"@": "mapCache"}
             ],
             "objectDescriptorModule": {
-                "%": "data/main.datareel/model/vendor.mjson"
+                "%": "data/main.datareel/model/client.mjson"
             },
-            "exportName": "Vendor",
+            "exportName": "Client",
             "module": {
-                "%": "data/main.datareel/model/vendor"
-            }
+                "%": "data/main.datareel/model/client"
+            },
+            "object":{"@": "client"}
         }
     },
-
+    "client": {
+        "object": "data/main.datareel/model/client"
+    },
     "name": {
         "prototype": "montage/core/meta/property-descriptor",
         "values": {
@@ -69,7 +72,7 @@
         "object": "data/main.datareel/model/client-order.mjson"
     },
     "attachment_descriptor": {
-        "object": "data/main.datareel/model/attachment.mjson"
+        "object": "montage-airtable/data/main.datareel/model/attachment.mjson"
     }
 
 }

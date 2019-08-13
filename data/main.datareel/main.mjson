@@ -1,4 +1,8 @@
 {
+    "airtableService": {
+        "object": "data/main.datareel/airtable-service.mjson"
+    },
+
     "root": {
         "prototype": "montage/data/service/data-service",
         "values": {
@@ -7,10 +11,7 @@
                 {"@": "airtableService"}
             ]
         }
-    },
-
-    "airtableService": {
-        "object": "data/main.datareel/airtable-service.mjson"
     }
+
 }
 

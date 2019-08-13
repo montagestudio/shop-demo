@@ -20,14 +20,17 @@
             "exportName": "Vendor",
             "module": {
                 "%": "data/main.datareel/model/vendor"
-            }
+            },
+            "object":{"@": "vendor"}
         }
     },
-
+    "vendor": {
+        "object": "data/main.datareel/model/vendor"
+    },
     "name": {
         "prototype": "montage/core/meta/property-descriptor",
         "values": {
-            "name": "id",
+            "name": "name",
             "valueType": "string"
         }
     },
@@ -96,7 +99,7 @@
         "object": "data/main.datareel/model/furniture.mjson"
     },
     "attachment_descriptor": {
-        "object": "data/main.datareel/model/attachment.mjson"
+        "object": "montage-airtable/data/main.datareel/model/attachment.mjson"
     },
     "vendor_contact_descriptor": {
         "object": "data/main.datareel/model/vendor-contact.mjson"

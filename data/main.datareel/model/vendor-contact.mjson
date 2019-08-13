@@ -16,10 +16,13 @@
             "exportName": "VendorContact",
             "module": {
                 "%": "data/main.datareel/model/vendor-contact"
-            }
+            },
+            "object":{"@": "vendorContact"}
         }
     },
-
+    "vendorContact": {
+        "object": "data/main.datareel/model/vendor-contact"
+    },
     "name": {
         "prototype": "montage/core/meta/property-descriptor",
         "values": {
@@ -32,7 +35,7 @@
         "values": {
             "name": "vendors",
             "cardinality": -1,
-            "valueDescriptor": {"@": "vendor_descriptor"}       
+            "valueDescriptor": {"@": "vendor_descriptor"}
         }
     },
     "photos": {
@@ -45,7 +48,7 @@
     },
     "phoneNumber": {
         "prototype": "montage/core/meta/property-descriptor",
-        "values": { 
+        "values": {
             "name": "phoneNumber",
             "valueType": "string"
         }
@@ -61,7 +64,7 @@
         "object": "data/main.datareel/model/vendor.mjson"
     },
     "attachment_descriptor": {
-        "object": "data/main.datareel/model/attachment.mjson"
+        "object": "montage-airtable/data/main.datareel/model/attachment.mjson"
     }
 
 }

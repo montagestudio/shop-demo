@@ -6,10 +6,10 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "name": {"<->": "Name"}
-                    "furniture": {"<->": "furniture",
-                    "converter": {"@": "furnitureForeignKeyConverter"},
-                    "background": {"<->": "Background"}
+                    "name": {"<->": "fields.Name"},
+                    "furniture": {"<->": "fields.Furniture"},
+                                    "converter": {"@": "furnitureForeignKeyConverter"},
+                    "background": {"<->": "fields.Background"}
 
                 }
             },
@@ -19,7 +19,7 @@
             },
            
             "requisitePropertyNames": [
-                "id"
+                "id","name"
             ]
         }
     },

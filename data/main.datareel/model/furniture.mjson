@@ -28,8 +28,12 @@
             "exportName": "Furniture",
             "module": {
                 "%": "data/main.datareel/model/furniture"
-            }
+            },
+            "object":{"@": "furniture"}
         }
+    },
+    "furniture": {
+        "object": "data/main.datareel/model/furniture"
     },
 
     "name": {
@@ -42,7 +46,7 @@
     "orders": {
         "prototype": "montage/core/meta/property-descriptor",
         "values": {
-            "name": "vendors",
+            "name": "orders",
             "cardinality": -1,
             "valueDescriptor": {"@": "order_line_item"}       
         }
@@ -114,7 +118,7 @@
     "schematics": {
         "prototype": "montage/core/meta/property-descriptor",
         "values": {
-            "name": "pirctures",
+            "name": "schematics",
             "cardinality": -1,
             "valueDescriptor": {"@": "attachment_descriptor"}
         }
@@ -166,7 +170,7 @@
         "object": "data/main.datareel/model/designer.mjson"
     },
     "attachment_descriptor": {
-        "object": "data/main.datareel/model/attachment.mjson"
+        "object": "montage-airtable/data/main.datareel/model/attachment.mjson"
     }
 
 }

@@ -17,8 +17,12 @@
             "exportName": "OrderLineItem",
             "module": {
                 "%": "data/main.datareel/model/order-line-item"
-            }
+            },
+            "object":{"@": "orderLineItem"}
         }
+    },
+    "orderLineItem": {
+        "object": "data/main.datareel/model/order-line-item"
     },
     "name": {
         "prototype": "montage/core/meta/property-descriptor",

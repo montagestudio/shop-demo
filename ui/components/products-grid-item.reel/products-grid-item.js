@@ -35,7 +35,7 @@ exports.ProductsGridItem = Component.specialize({
     draw: {
         value: function () {
             if (this.pictures && this.pictures.length) {
-                this.imageElement.style.backgroundImage = "url(" + this.pictures[0] + ")";
+                this.imageElement.style.backgroundImage = "url(" + this.pictures[0].url + ")";
             }
         }
     }

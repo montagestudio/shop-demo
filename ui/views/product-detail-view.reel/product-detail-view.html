@@ -19,7 +19,7 @@
             "prototype": "ui/components/products-carousel2.reel",
             "values": {
                 "element": {"#": "carousel"},
-                "content": {"<-": "@owner.product.picture"}
+                "content": {"<-": "@owner.product.pictures"}
             }
         },
         "back": {
@@ -53,21 +53,21 @@
             "prototype": "montage/ui/text.reel",
             "values": {
                 "element": {"#": "size"},
-                "value": {"<-": "@owner.product.size"}
+                "value": {"<-": "@owner.product.sizeWxLxH"}
             }
         },
          "designer": {
             "prototype": "montage/ui/text.reel",
             "values": {
                 "element": {"#": "designer"},
-                "value": {"<-": "@owner.product.designer"}
+                "value": {"<-": "@owner.product.designers.map{name}"}
             }
         },
          "vendor": {
             "prototype": "montage/ui/text.reel",
             "values": {
                 "element": {"#": "vendor"},
-                "value": {"<-": "@owner.product.vendor"}
+                "value": {"<-": "@owner.product.vendors.map{name}"}
             }
         },
         "description": {

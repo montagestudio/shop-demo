@@ -6,9 +6,17 @@
             "rawDataPrimaryKeys":["id"],
             "objectMapping": {
                 "rules": {
-                    "furniture": {"<->": "furniture",
-                    "converter": {"@": "furnitureForeignKeyConverter"},
-                    "logos": {"<->": "logo"}
+                    "name": {"<->": "fields.Name"},
+                    "notes": {"<->": "fields.Notes"},
+                    "furnitures": {"<->": "fields.Furniture",
+                                    "converter": {"@": "furnitureForeignKeyConverter"}},
+                    "logos": {"<->": "fields.Logo",
+                                     "converter": {"@": "logosConverter"}},
+
+                    "detections": {
+                        "<-": "{sensorId: id, rawData: icd101aReport.detection}",
+                        "converter": {"@": "detectionsForeignKeyConverter"}
+                    }
 
                 }
             },
@@ -16,13 +24,8 @@
                 "rules": {
                 }
             },
-            "detections": {
-                        "<-": "{sensorId: id, rawData: icd101aReport.detection}",
-                        "converter": {"@": "detectionsForeignKeyConverter"}
-                    }
-
             "requisitePropertyNames": [
-                "id"
+                "id","name","notes","logos"
             ]
         }
     },
@@ -33,13 +36,18 @@
     "furnitureForeignKeyConverter": {
         "prototype": "montage/data/converter/raw-property-value-to-object-converter",
         "values": {
-            "convertE   xpression": "$.has(id)"
+            "convertExpression": "$.has(id)"
         }
     },
     "detectionsForeignKeyConverter": {
         "prototype": "montage/data/converter/raw-property-value-to-object-converter",
         "properties": {
             "convertExpression": "sensorId == $.id && rawData == $.icd101aReport.detection"
+        }
+    },
+    "logosConverter": {
+        "prototype": "montage/data/converter/raw-embedded-value-to-object-converter",
+        "values": {
         }
     }
 

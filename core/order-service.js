@@ -7,9 +7,10 @@ var OrderService = (function () {
     Object.defineProperty(OrderService.prototype, "total", {
         get: function () {
             return this.order.reduce(function (total, productOrder) {
-                return total += (productOrder.quantity *
-                    Number(productOrder.product.unitCost.replace(/[^0-9.-]+/g, "")));
-            }, 0).toFixed(2);
+                // return total += (productOrder.quantity *
+                //     Number(productOrder.product.unitCost.replace(/[^0-9.-]+/g, "")));
+                    return total += (productOrder.quantity * productOrder.product.unitCost);
+                }, 0).toFixed(2);
         },
         enumerable: true,
         configurable: true

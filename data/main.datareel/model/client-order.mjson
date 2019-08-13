@@ -20,8 +20,13 @@
             "exportName": "ClientOrder",
             "module": {
                 "%": "data/main.datareel/model/client-order"
-            }
+            },
+            "object":{"@": "clientOrder"}
+
         }
+    },
+    "clientOrder": {
+        "object": "data/main.datareel/model/client-order"
     },
     "name": {
         "prototype": "montage/core/meta/property-descriptor",
@@ -96,7 +101,7 @@
         "object": "data/main.datareel/model/order-line-item.mjson"
     },
     "attachment_descriptor": {
-        "object": "data/main.datareel/model/attachment.mjson"
+        "object": "montage-airtable/data/main.datareel/model/attachment.mjson"
     }
 
 }

@@ -14,13 +14,17 @@
             "exportName": "Designer",
             "module": {
                 "%": "data/main.datareel/model/designer"
-            }
-        }
+            },
+            "object":{"@": "designer"}
+      }
+    },
+    "designer": {
+        "object": "data/main.datareel/model/designer"
     },
     "name": {
         "prototype": "montage/core/meta/property-descriptor",
         "values": {
-            "name": "id",
+            "name": "name",
             "valueType": "string"
         }
     },

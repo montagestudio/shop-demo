@@ -1,24 +1,38 @@
 {
+    "furniture": {
+        "object": "data/main.datareel/model/furniture.mjson"
+    },
+    "furnitureMapping": {
+        "object": "data/main.datareel/mapping/furniture-mapping.mjson"
+    },
+    "vendor": {
+        "object": "data/main.datareel/model/vendor.mjson"
+    },
+    "vendorMapping": {
+        "object": "data/main.datareel/mapping/vendor-mapping.mjson"
+    },
+    "designer": {
+        "object": "data/main.datareel/model/designer.mjson"
+    },
+    "designerMapping": {
+        "object": "data/main.datareel/mapping/designer-mapping.mjson"
+    },
     "root": {
-        "prototype": "montage-airtable/data/main.datareel/service/airtable-service",
+        "prototype": "montage-airtable/data/main.datareel/airtable-service.mjson",
         "values": {
             "name": "AirtableService",
             "exportName": "AirtableService",
             "APIKey":"keypOR745TkuhvJBV",
             "mappings": [
-                {"@": "furnitureMapping"}
+                {"@": "furnitureMapping"},
+                {"@": "vendorMapping"},
+                {"@": "designerMapping"}
             ],
             "types": [
-                {"@": "furniture"}
+                {"@": "furniture"},
+                {"@": "vendor"},
+                {"@": "designer"}
             ]
         }
-    },
-
-    "furniture": {
-        "object": "data/main.datareel/model/furniture.mjson"
-    },
-
-    "furnitureMapping": {
-        "object": "data/main.datareel/mapping/furniture-mapping.mjson"
     }
 }

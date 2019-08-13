@@ -38,10 +38,13 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             //
             var self = this;
+
+            // Array.prototype.push.apply(self.furnitureDataStream.data,self.productService.list());
+            // self.featured = self.productService.featured();
             mainService.fetchData(this.furnitureQuery,null,this.furnitureDataStream).then(function (furnitures) {
-                if(!furnitures) {
-                    Array.prototype.push.apply(self.furnitureDataStream.data,self.productService.list());
-                }
+                // if(!furnitures) {
+                //     Array.prototype.push.apply(self.furnitureDataStream.data,self.productService.list());
+                // }
                 if(!self.featured) {
                     self.featured = self.productService.featured();
                 }

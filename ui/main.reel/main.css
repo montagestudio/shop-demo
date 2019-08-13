@@ -1,5 +1,13 @@
-.Layout-header {
+.Main, .Layout {
     position: fixed;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+}
+
+.Layout-header {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -9,12 +17,20 @@
 
 .Layout-body {
     box-sizing: border-box;
-    padding: 16px;
-    position: relative;
-    width: 750px;
-    margin-top: 76px;
+    position: absolute;
+    margin-top: 2%;
     margin-left: auto;
     margin-right: auto;
+    top: 76px;
+    left: 2%;
+    right:2%;
+    bottom:2%;
+}
+
+.Layout-body > * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .Layout-block1 {
@@ -23,11 +39,99 @@
 }
 
 .Layout-block3 {
-    position: relative;
+    position: absolute;
+    top:250px;
+    bottom:0px;
+    width:100%;
 }
 .hide {
     display: none;
 }
+
+
+.montage-Succession--push .buildInFrom {
+    position: absolute;
+    top:2px;
+    transform:  translateX(100%);
+}
+.montage-Succession--push .buildIn {
+    position: absolute;
+    top:2px;
+    transition: transform 0.8s ease-in-out;
+}
+.montage-Succession--push .buildOut {
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+.montage-Succession--push .buildOutTo {
+    transform: translateX(-100%);
+    opacity:0;
+}
+
+
+.montage-Succession--pop .buildInFrom {
+    transform: translateX(-100%);
+    opacity:0;
+}
+.montage-Succession--pop .buildIn {
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    opacity:1;
+}
+.montage-Succession--pop .buildOut {
+    transition: transform 0.8s ease-in-out;
+}
+.montage-Succession--pop .buildOutTo {
+    transform: translateX(100%);
+}
+
+
+.montage-Succession--replace .buildInFrom {
+    transform: translateX(0%);
+    opacity:0;
+}
+.montage-Succession--replace .buildIn {
+    transition: opacity  0.8s ease-in-out;
+    opacity:1;
+}
+.montage-Succession--replace .buildOut {
+    transition: opacity  0.8s ease-in-out;
+    opacity:1;
+}
+.montage-Succession--replace .buildOutTo {
+    transform: translateX(0%);
+    opacity:0;
+}
+
+.montage-Succession--clear .buildInFrom {
+    transform: translateX(100%);
+}
+.montage-Succession--clear .buildIn {
+    transition: transform 0.8s ease-in-out;
+}
+.montage-Succession--clear .buildOut {
+    transition: transform 0.8s ease-in-out;
+}
+.montage-Succession--clear .buildOutTo {
+    transform: translateX(-100%);
+}
+ 
+/*
+.buildInFrom {
+    transform: translateX(100%);
+}   
+
+.buildIn {
+    transition: transform .8s ease-in-out;
+}
+
+.buildOut {
+    transition: transform .8s ease-in-out;
+}
+
+.buildOutTo {
+    transform: translateX(-100%);
+}
+*/
+
 
 @media (max-width: 767px) {
 
@@ -37,12 +141,11 @@
 
     .Layout-body {
         box-sizing: border-box;
-        padding: 2px;
-        position: relative;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 60px;
+        top: 60px;
+        bottom:0px;
     }
 
     .Layout-block1 {

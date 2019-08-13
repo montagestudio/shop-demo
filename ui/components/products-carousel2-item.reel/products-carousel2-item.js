@@ -27,7 +27,7 @@ exports.ProductsCarousel2Item = Component.specialize({
     draw: {
         value: function () {
             if (this._image) {
-                this.imageElement.style.backgroundImage = "url(" + this._image + ")";
+                this.imageElement.style.backgroundImage = "url(" + this._image.url + ")";
             }
         }
     }
